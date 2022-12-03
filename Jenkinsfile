@@ -4,7 +4,7 @@
         stage("build"){
             steps{
                 bat("node -v")
-                bat(echo "hello sir i am jenkinsfile")
+                echo "hello sir i am jenkinsfile"
                 bat("npm install")
                 echo "build done sir"
             }
