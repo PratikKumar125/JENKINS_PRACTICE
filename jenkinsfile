@@ -5,16 +5,19 @@
             steps{
                 bat("node -v")
                 bat(echo "hello sir i am jenkinsfile")
+                bat("npm install")
+                echo "build done sir"
             }
         }
         stage("test"){
             steps{
-                bat(echo "hello sir i am testing your code, which is looking trash as of now")
+                echo "hello sir i am testing your code, which is looking trash as of now"
             }
         }
         stage("deploy"){
             steps{
-                echo("hello sir i am deploying your app on server")
+                bat("npm run build")
+                echo "hello sir i am deploying your app on server"
             }
         }
     }
