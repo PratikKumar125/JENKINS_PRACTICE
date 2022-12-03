@@ -1,0 +1,21 @@
+ pipeline{
+    agent : any
+    stages{
+        stage("build"){
+            steps{
+                bat("node -v")
+                bat(echo "hello sir i am jenkinsfile")
+            }
+        }
+        stage("test"){
+            steps{
+                bat(echo "hello sir i am testing your code, which is looking trash as of now")
+            }
+        }
+        stage("deploy"){
+            steps{
+                echo("hello sir i am deploying your app on server")
+            }
+        }
+    }
+ }
