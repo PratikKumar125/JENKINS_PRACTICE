@@ -1,6 +1,6 @@
  pipeline{
     agent any
-  enviroment{
+  environment{
     MY_PATH = "C:/Program Files/apache-tomcat-10.0.27-windows-x64/apache-tomcat-10.0.27/webapps"
   }
   tools{
