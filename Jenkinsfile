@@ -13,7 +13,7 @@
 //                 bat("node -v")
                 echo "hello sir i am jenkinsfile"
 //                 bat("npm install")
-                bat("docker build -t myReactApp .")
+                bat("docker build -t myreactapp .")
                 echo "build done sir"
             }
         }
