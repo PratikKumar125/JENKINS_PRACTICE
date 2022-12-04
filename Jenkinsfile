@@ -20,7 +20,7 @@
         stage("test"){
             steps{
                 echo "dockerhub uname is ${DOCKER_CREDS_USR}"
-                echo "dockerhub uname is ${Dockerhub_PSW}"
+                
                 echo "hello sir i am testing your code, which is looking trash as of now"
             }
         }
