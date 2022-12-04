@@ -22,10 +22,10 @@
         }
         stage("deploy"){
             steps{
-//                 bat("npm run build")
-             bat("npm start")
+             bat("cd ${MY_PATH}")
+             bat("mkdir APPAAGYA")
              echo "workdir is ${env.WORKSPACE}"
-                echo "hello sir i am deploying your app on server"
+             echo "hello sir i am deploying your app on server"
             }
         }
     }
