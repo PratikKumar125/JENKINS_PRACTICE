@@ -1,7 +1,7 @@
  pipeline{
     agent any
   enviroment{
-    MY_PATH = "C:\Program Files\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps"
+    MY_PATH = "C:/Program Files/apache-tomcat-10.0.27-windows-x64/apache-tomcat-10.0.27/webapps"
   }
   tools{
    nodejs "NODEJS"
