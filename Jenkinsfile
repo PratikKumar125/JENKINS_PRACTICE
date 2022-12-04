@@ -1,5 +1,8 @@
  pipeline{
     agent any
+  enviroment{
+    MY_PATH = "C:\Program Files\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps"
+  }
   tools{
    nodejs "NODEJS"
   }
@@ -20,7 +23,7 @@
         stage("deploy"){
             steps{
 //                 bat("npm run build")
-                bat("cd C:\Program Files\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps")
+             bat("cd ${MY_PATH}")
                 bat("mkdir ReactApp")
                 echo "hello sir i am deploying your app on server"
             }
