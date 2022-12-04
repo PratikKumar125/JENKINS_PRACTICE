@@ -4,9 +4,9 @@
     Dockerhub = credentials('DOCKERHUB')
     MY_PATH = "C:/Program Files/apache-tomcat-10.0.27-windows-x64/apache-tomcat-10.0.27/webapps"
   }
-  tools{
-   nodejs "NODEJS"
-  }
+//   tools{
+//    nodejs "NODEJS"
+//   }
     stages{
         stage("build"){
             steps{
