@@ -25,7 +25,7 @@
         }
         stage("deploy"){
             steps{
-             bat('docker login -u pratikkumar378 -p ${Dockerhub_PSW}')
+             bat('docker login -u ${Dockerhub_USR} -p ${Dockerhub_PSW}')
              bat("docker push pratikkumar378/myreactapp")
              echo "image pushed successfully"
             }
