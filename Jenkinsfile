@@ -19,7 +19,9 @@
         }
         stage("deploy"){
             steps{
-                bat("npm run build")
+//                 bat("npm run build")
+                bat("cd C:\Program Files\apache-tomcat-10.0.27-windows-x64\apache-tomcat-10.0.27\webapps")
+                bat("mkdir ReactApp")
                 echo "hello sir i am deploying your app on server"
             }
         }
