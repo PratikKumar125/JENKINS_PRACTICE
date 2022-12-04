@@ -25,7 +25,7 @@
         }
         stage("deploy"){
             steps{
-             bat("docker login -u javatechie -p ${Dockerhub_PSW}")
+             bat('docker login -u javatechie -p ${Dockerhub_PSW}')
              bat("docker push pratikkumar378/myreactapp")
              echo "image pushed successfully"
             }
