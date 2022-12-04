@@ -10,10 +10,10 @@
     stages{
         stage("build"){
             steps{
-//                 bat("node -v")
+//              bat("node -v")
                 echo "hello sir i am jenkinsfile"
-//                 bat("npm install")
-                bat("docker build -t myreactapp .")
+//              bat("npm install")
+                bat("docker build -t pratikkumar378/myreactapp .")
                 echo "build done sir"
             }
         }
@@ -25,8 +25,9 @@
         }
         stage("deploy"){
             steps{
-             
-             echo "hello sir i am deploying your app on server"
+             bat("docker login -u javatechie -p ${Dockerhub_PSW}")
+             bat("docker push pratikkumar378/myreactapp")
+             echo "image pushed successfully"
             }
         }
     }
