@@ -20,12 +20,13 @@
         stage("test"){
             steps{
                 echo "dockerhub uname is ${Dockerhub_USR}"
+             echo "dockerhub uname is ${Dockerhub_PSW}"
                 echo "hello sir i am testing your code, which is looking trash as of now"
             }
         }
         stage("deploy"){
             steps{
-             bat('docker login -u "pratikkumar378" -p "Prateek@123"')
+             bat('docker login -u ${Dockerhub_USR} -p ${Dockerhub_PSW}')
              bat("docker push pratikkumar378/myreactapp")
              echo "image pushed successfully"
             }
