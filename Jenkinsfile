@@ -26,7 +26,7 @@
              }
              steps{
                 bat("docker logout")
-                bat("docker login -u ${DOCKER_CREDS_USR} -p ${DOCKER_CREDS_PSW}')
+                bat("docker login -u ${DOCKER_CREDS_USR} -p ${DOCKER_CREDS_PSW}")
 //              bat("docker push pratikkumar378/myreactappnew")
                 echo "image pushed successfully"
             }
