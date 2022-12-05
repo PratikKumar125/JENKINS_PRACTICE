@@ -1,8 +1,5 @@
  pipeline{
     agent any
-    environment{
-       DOCKER_CREDS = credentials("dockerhub")
-    }
 //   tools{
 //    nodejs "NODEJS"
 //   }
@@ -24,11 +21,14 @@
             }
         }
         stage("deploy"){
-            steps{
-             bat("docker logout")
-             bat('docker login -u pratikkumar378 -p Prateek@123')
+             environment{
+                 DOCKER_CREDS = credentials("dockerhub")
+             }
+             steps{
+                bat("docker logout")
+                bat("docker login -u ${dockerhub_USR}  -p ${dockerhub_PSW}')
 //              bat("docker push pratikkumar378/myreactappnew")
-             echo "image pushed successfully"
+                echo "image pushed successfully"
             }
         }
     }
