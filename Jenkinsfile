@@ -1,7 +1,7 @@
  pipeline{
     agent any
-  environment{
-    DOCKER_CREDS = credentials('DOCKERCREDS')
+    environment{
+       DOCKER_CREDS = credentials("dockerhub")
 //     MY_PATH = "C:/Program Files/apache-tomcat-10.0.27-windows-x64/apache-tomcat-10.0.27/webapps"
   }
 //   tools{
