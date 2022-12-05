@@ -13,7 +13,7 @@
 //              bat("node -v")
                 echo "hello sir i am jenkinsfile"
 //              bat("npm install")
-                bat("docker build -t pratikkumar378/myreactapp .")
+                bat("docker build -t pratikkumar378/myreactappnew .")
                 echo "build done sir"
             }
         }
@@ -27,7 +27,7 @@
         stage("deploy"){
             steps{
              bat('docker login -u ${DOCKER_CREDS_USR} --password-stdin')
-             bat("docker push pratikkumar378/myreactapp")
+             bat("docker push pratikkumar378/myreactappnew")
              echo "image pushed successfully"
             }
         }
