@@ -11,7 +11,9 @@ pipeline{
         stage("build"){
             steps{
                 bat('echo node -v')
-                docker.build("my-image:${BUILD_ID}")
+                script{
+                    docker.build("my-image:${BUILD_ID}")
+                }
                 bat('echo done h bhai congrats')
             }
         }
