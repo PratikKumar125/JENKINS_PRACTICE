@@ -1,0 +1,19 @@
+pipeline{
+    agent{
+        docker{
+            image 'node'
+        }
+    }
+    environment{
+        BUILD_ID = "3.5"
+    }
+    stages{
+        stage("build"){
+            steps{
+                bat('echo node -v')
+                docker.build("my-image:${BUILD_ID}")
+                bat('echo done h bhai congrats')
+            }
+        }
+    }    
+}
