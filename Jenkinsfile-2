@@ -6,7 +6,9 @@ pipeline{
     stages{
         stage("build"){
             steps{
-                docker.build("dummyreact")
+                script{
+                    docker.build("dummyreact")
+                }
                 bat('echo node -v')
                 bat('echo done h bhai congrats')
             }
