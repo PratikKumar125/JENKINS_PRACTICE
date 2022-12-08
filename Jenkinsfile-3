@@ -1,0 +1,13 @@
+pipeline{
+    agent{
+        docker {image 'node:14'}
+    }
+    stages{
+        stage("build"){
+            steps{
+                bat('echo node -v')
+                bat('echo done h bhai congrats')
+            }
+        }
+    }    
+}
